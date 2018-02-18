@@ -1164,7 +1164,10 @@ int playSmithy(int handPos, int currentPlayer, struct gameState *state)
   //for (i = 0; i < 3; i++)
   while (state->handCount[currentPlayer] < 8)
   {
-	drawCard(currentPlayer, state);
+	int result = drawCard(currentPlayer, state);
+	
+	// ADDED FOR ASSIGNMENT 4 SO IT WOULDN'T CAUSE INFINITE LOOP
+	if (result < 0) break;
   }
   			
   //discard card from hand
