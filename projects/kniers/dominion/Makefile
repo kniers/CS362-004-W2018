@@ -52,3 +52,4 @@ randomtests: randomtestadventurer randomtestcard1 randomtestcard2
 	./randomtestadventurer >> randomtestadventurer.out
 	./randomtestcard1 >> randomtestcard1.out
 	./randomtestcard2 >> randomtestcard2.out
+	gcov -b dominion.c >> randomtestcoverage.out
