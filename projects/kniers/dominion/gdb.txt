@@ -1,0 +1,262 @@
+Breakpoint 1 at 0x4076c9: file dominion.c, line 1165.
+Starting program: /nfs/stak/users/kniers/cs362/CS362-004-W2018/projects/kniers/dominion/randomtestcard1 
+
+Breakpoint 1, playSmithy (handPos=0, currentPlayer=0, state=0x7ffffffef3d0)
+    at dominion.c:1165
+1165	  while (state->handCount[currentPlayer] < 8)
+Missing separate debuginfos, use: debuginfo-install glibc-2.17-196.el7_4.2.x86_64
+Hardware watchpoint 2: state->handCount[currentPlayer]
+$1 = 4
+Continuing.
+Hardware watchpoint 2: state->handCount[currentPlayer]
+
+Old value = 4
+New value = 5
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 2: state->handCount[currentPlayer]
+
+Old value = 5
+New value = 6
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 2: state->handCount[currentPlayer]
+
+Old value = 6
+New value = 7
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 2: state->handCount[currentPlayer]
+
+Old value = 7
+New value = 8
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 2: state->handCount[currentPlayer]
+
+Old value = 8
+New value = 7
+0x0000000000407e49 in discardCard (handPos=0, currentPlayer=0, 
+    state=0x7ffffffef3d0, trashFlag=0) at dominion.c:1296
+1296	      state->handCount[currentPlayer]--;
+Continuing.
+
+Watchpoint 2 deleted because the program has left the block in
+which its expression is valid.
+0x0000000000405c49 in cardEffect (card=13, choice1=0, choice2=0, choice3=0, 
+    state=0x7ffffffef3d0, handPos=0, bonus=0x7fffffffc14c) at dominion.c:814
+814		  return playSmithy(handPos, currentPlayer, state);
+Continuing.
+
+Breakpoint 1, playSmithy (handPos=0, currentPlayer=0, state=0x7ffffffef3d0)
+    at dominion.c:1165
+1165	  while (state->handCount[currentPlayer] < 8)
+Hardware watchpoint 3: state->handCount[currentPlayer]
+Continuing.
+Hardware watchpoint 3: state->handCount[currentPlayer]
+
+Old value = 7
+New value = 8
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 3: state->handCount[currentPlayer]
+
+Old value = 8
+New value = 7
+0x0000000000407e49 in discardCard (handPos=0, currentPlayer=0, 
+    state=0x7ffffffef3d0, trashFlag=0) at dominion.c:1296
+1296	      state->handCount[currentPlayer]--;
+Continuing.
+
+Watchpoint 3 deleted because the program has left the block in
+which its expression is valid.
+0x0000000000405c49 in cardEffect (card=13, choice1=0, choice2=0, choice3=0, 
+    state=0x7ffffffef3d0, handPos=0, bonus=0x7fffffffc14c) at dominion.c:814
+814		  return playSmithy(handPos, currentPlayer, state);
+Continuing.
+
+Breakpoint 1, playSmithy (handPos=0, currentPlayer=0, state=0x7ffffffef3d0)
+    at dominion.c:1165
+1165	  while (state->handCount[currentPlayer] < 8)
+Hardware watchpoint 4: state->handCount[currentPlayer]
+Continuing.
+Hardware watchpoint 4: state->handCount[currentPlayer]
+
+Old value = 3
+New value = 4
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 4: state->handCount[currentPlayer]
+
+Old value = 4
+New value = 5
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 4: state->handCount[currentPlayer]
+
+Old value = 5
+New value = 6
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 4: state->handCount[currentPlayer]
+
+Old value = 6
+New value = 7
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 4: state->handCount[currentPlayer]
+
+Old value = 7
+New value = 8
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 4: state->handCount[currentPlayer]
+
+Old value = 8
+New value = 7
+0x0000000000407e49 in discardCard (handPos=0, currentPlayer=0, 
+    state=0x7ffffffef3d0, trashFlag=0) at dominion.c:1296
+1296	      state->handCount[currentPlayer]--;
+Continuing.
+
+Watchpoint 4 deleted because the program has left the block in
+which its expression is valid.
+0x0000000000405c49 in cardEffect (card=13, choice1=0, choice2=0, choice3=0, 
+    state=0x7ffffffef3d0, handPos=0, bonus=0x7fffffffc14c) at dominion.c:814
+814		  return playSmithy(handPos, currentPlayer, state);
+Continuing.
+
+Breakpoint 1, playSmithy (handPos=0, currentPlayer=0, state=0x7ffffffef3d0)
+    at dominion.c:1165
+1165	  while (state->handCount[currentPlayer] < 8)
+Hardware watchpoint 5: state->handCount[currentPlayer]
+Continuing.
+Hardware watchpoint 5: state->handCount[currentPlayer]
+
+Old value = 3
+New value = 4
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 5: state->handCount[currentPlayer]
+
+Old value = 4
+New value = 5
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 5: state->handCount[currentPlayer]
+
+Old value = 5
+New value = 6
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 5: state->handCount[currentPlayer]
+
+Old value = 6
+New value = 7
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 5: state->handCount[currentPlayer]
+
+Old value = 7
+New value = 8
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 5: state->handCount[currentPlayer]
+
+Old value = 8
+New value = 7
+0x0000000000407e49 in discardCard (handPos=0, currentPlayer=0, 
+    state=0x7ffffffef3d0, trashFlag=0) at dominion.c:1296
+1296	      state->handCount[currentPlayer]--;
+Continuing.
+
+Watchpoint 5 deleted because the program has left the block in
+which its expression is valid.
+0x0000000000405c49 in cardEffect (card=13, choice1=0, choice2=0, choice3=0, 
+    state=0x7ffffffef3d0, handPos=0, bonus=0x7fffffffc14c) at dominion.c:814
+814		  return playSmithy(handPos, currentPlayer, state);
+Continuing.
+
+Breakpoint 1, playSmithy (handPos=0, currentPlayer=0, state=0x7ffffffef3d0)
+    at dominion.c:1165
+1165	  while (state->handCount[currentPlayer] < 8)
+Hardware watchpoint 6: state->handCount[currentPlayer]
+Continuing.
+Hardware watchpoint 6: state->handCount[currentPlayer]
+
+Old value = 5
+New value = 6
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 6: state->handCount[currentPlayer]
+
+Old value = 6
+New value = 7
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 6: state->handCount[currentPlayer]
+
+Old value = 7
+New value = 8
+0x0000000000404f99 in drawCard (player=0, state=0x7ffffffef3d0)
+    at dominion.c:577
+577	    state->handCount[player]++;//Increment hand count
+Continuing.
+Hardware watchpoint 6: state->handCount[currentPlayer]
+
+Old value = 8
+New value = 7
+0x0000000000407e49 in discardCard (handPos=0, currentPlayer=0, 
+    state=0x7ffffffef3d0, trashFlag=0) at dominion.c:1296
+1296	      state->handCount[currentPlayer]--;
+Continuing.
+
+Watchpoint 6 deleted because the program has left the block in
+which its expression is valid.
+0x0000000000405c49 in cardEffect (card=13, choice1=0, choice2=0, choice3=0, 
+    state=0x7ffffffef3d0, handPos=0, bonus=0x7fffffffc14c) at dominion.c:814
+814		  return playSmithy(handPos, currentPlayer, state);
+Continuing.
+
+Breakpoint 1, playSmithy (handPos=0, currentPlayer=0, state=0x7ffffffef3d0)
+    at dominion.c:1165
+1165	  while (state->handCount[currentPlayer] < 8)
+A debugging session is active.
+
+	Inferior 1 [process 19877] will be killed.
+
+Quit anyway? (y or n) 

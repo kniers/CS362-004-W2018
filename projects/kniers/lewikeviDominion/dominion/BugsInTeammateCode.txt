@@ -1,0 +1,55 @@
+Dominion bug report
+
+Steven Knier, testing code modified by Kevin Lewis (lewikevi)
+CS 362 Assignment 5
+3/4/2018
+
+
+--Smithy--
+Description: Playing the Smithy card does not draw the expected number of cards
+
+Details: When playing the Smithy card, I expect that it will add 3 cards to the players hand, remove 3 cards from the deck, and add 1 card to the set of cards in play. What I observed is that Smithy instead adds 4 cards to the player's hand, removes 4 from the deck, and does not add a card to the cards in play.
+
+Impact: High. It does not crash the game, but it does significantly alter gameplay
+
+Reproducibility: On 10,000 random tests, 9,078 of them failed. The ones that passed had less than 4 cards in the deck to start with. Every time there was 4 or more cards in the deck, this bug was observed and the test failed.
+
+Instruction to reproduce: Player starts with 5 cards in hand, one of them being a Smithy. Deck starts with 5 cards. Player plays Smithy. Observe that player has drawn 4 cards instead of the expected 3.
+
+Additional notes: Upon inspection of the code, there appears to be an off-by-one error introduced that will cause 4 cards to be drawn from the deck instead of 3. There also appears to be a bug that trashes the card instead of discarding it.
+
+
+--Mine--
+Description: Copper can be trashed to gain a Gold
+
+Details: When playing the Mine card, I expect that trashing a Copper will only allow the player to gain another Copper or a Silver because the cost is at most 3 above the Copper. However, I observe that the player is able to trash a Copper and gain a Gold which has a value 6 greater than Copper.
+
+Impact: Medium - The player should not attempt to trash a Copper to gain a Gold because this is against what the card says is an option. However, it could still be exploited during gameplay to the benefit of the player
+
+Reproducibility: In random testing, the operation of exchanging a Copper for a Gold was executed 20 times. Every time it was attempted, the bug occurred and the test failed.
+
+Instructions to reproduce: Player starts with a Mine and a Copper in hand. Player plays the Mine, trashes the Copper, and attempts to gain a Gold. Expected outcome is that a Gold will not be gained to the player's hand. Actual outcome is that a Gold is added to the player's hand, given there was at least one Gold in the Gold supply pile.
+
+
+--Adventurer--
+Description: Gold is not gained to the player's hand by playing Adventurer
+
+Details: When the player plays an Adventurer card, I expect that the next 2 treasure cards in the deck will be added to the player's hand. These could be Copper, Silver, or Gold. However, I observe that only Copper or Silver are added to the player's hand, even if there is a Gold near the top of the deck. 
+
+Impact: High - This bug greatly reduces the effectiveness of the Adventurer card in gameplay
+
+Reproducibility: In random testing, 5,714 out of 10,000 tests failed. It appears that not all of them are specifically caused by this bug
+
+Instructions to reproduce: Player starts with Adventurer card in hand. Deck has 2 gold cards on top, followed by 2 Silver cards. Player plays Adventurer. Expected to draw the 2 Gold cards, but instead the player draws the Silver cards and discards the Gold.
+
+
+--Adventurer bug 2--
+Description: Hand count set to -1 when not enough treasures in deck
+
+Details: When there are less than 2 treasures in the deck and the players plays Adventurer, I expect that the remainder of the cards will be discarded from the deck and the card effect will end. Instead, I observe that the player will also discard cards from the hand until the hand count is set to -1.
+
+Impact: Very high - This appears to produce additional cards in the discard pile while setting the hand count to an impossible number. In gameplay, it is possible that this bug would cause segmentation faults along with unexpected outcomes. 
+
+Reproducibility: It appears that this bug occurs every time there are not at least 2 Copper or Silver combined in the deck. Gold is already ignored due to the previously mentioned bug.
+
+Instructions to reproduce: Player starts with Adventurer card in hand. Deck contains no treasure cards. Player plays Adventurer. Expected outcome is that player's hand will remain the same and the deck will all be moved to the discard pile. Instead, the player's hand is set to -1 and there are additional cards in the discard pile.

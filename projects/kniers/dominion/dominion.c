@@ -1161,8 +1161,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 int playSmithy(int handPos, int currentPlayer, struct gameState *state) 
 {
   //+3 Cards
-  //for (i = 0; i < 3; i++)
-  while (state->handCount[currentPlayer] < 8)
+  int i;
+  for (i = 0; i < 3; i++)
+  //while (state->handCount[currentPlayer] < 8)
   {
 	int result = drawCard(currentPlayer, state);
 	

@@ -1,0 +1,74 @@
+ ----- Starting test: Smithy card -----
+ - Play smithy -
+hand count: 8, expected: 7
+Hand count - expected: 7, actual: 8
+^TEST FAILURE^
+played count: 0, expected: 1
+Played card count - expected: 1, actual: 0
+^TEST FAILURE^
+deck count: 1, expected: 2
+Deck count - expected: 2, actual: 1
+^TEST FAILURE^
+ - Play smithy with additional card in hand -
+hand count: 9, expected: 8
+Hand count - expected: 8, actual: 9
+^TEST FAILURE^
+played count: 0, expected: 1
+Played card count - expected: 1, actual: 0
+^TEST FAILURE^
+deck count: 1, expected: 2
+Deck count - expected: 2, actual: 1
+^TEST FAILURE^
+TEST FAILED
+
+ ----- Starting test: adventurer card -----
+ - Top of deck is 2 coppers -
+Hand count - expected: 7, actual: 7
+Deck count - expected: 3, actual: 3
+Discard count - expected: 0, actual: 0
+ - Top of deck is 2 silvers -
+Hand count - expected: 7, actual: 7
+Deck count - expected: 3, actual: 3
+Discard count - expected: 0, actual: 0
+ - Top of deck is 2 gold -
+Hand count - expected: 7, actual: 6
+^TEST FAILURE^
+Deck count - expected: 3, actual: 0
+^TEST FAILURE^
+Discard count - expected: 0, actual: 4
+^TEST FAILURE^
+ - Top of deck is copper, estate, village, and silver -
+Hand count - expected: 7, actual: 7
+Deck count - expected: 1, actual: 1
+Discard count - expected: 2, actual: 2
+TEST FAILED
+
+ ----- Starting test: village card -----
+ - Play village -
+Actions - expected: 2, actual: 3
+^TEST FAILURE^
+Hand count - expected: 5, actual: 5
+Deck count - expected: 4, actual: 4
+Played card count - expected: 1, actual: 1
+TEST FAILED
+
+ ----- Starting test: embargo card -----
+ - Play embargo on copper -
+Tokens on copper - expected: 1, actual: 1
+Coins - expected: 6, actual: 6
+ - Play embargo on copper with a token already on copper -
+Tokens on copper - expected: 2, actual: 2
+Coins - expected: 6, actual: 6
+ - Play embargo on village with a token already on copper -
+Tokens on copper - expected: 1, actual: 1
+Tokens on village - expected: 1, actual: 1
+Coins - expected: 6, actual: 6
+TEST SUCCESSFULLY COMPLETED
+
+File 'dominion.c'
+Lines executed:34.77% of 558
+Branches executed:38.01% of 413
+Taken at least once:26.39% of 413
+Calls executed:25.26% of 95
+Creating 'dominion.c.gcov'
+
